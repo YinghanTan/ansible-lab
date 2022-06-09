@@ -2,8 +2,6 @@
 
 *Warning: this is still in-progress and do not use*
 
-Also check **[Terraform IaC Examples ](https://github.com/ginigangadharan/terraform-iac-usecases)**.
-
 Read Full Article here : [Use Terraform to Create a FREE Ansible Lab in AWS](https://www.techbeatly.com/2021/06/use-terraform-to-create-a-free-ansible-lab-in-aws.html)
 
 ## Introduction
@@ -12,7 +10,7 @@ Terraform will provision below resources and take note on details.
 
 - 1x ec2 instance for Ansible Engine.
 - 2x ec2 instances fro Ansible managed nodes.
-- We are using `Amazon Linux 2 AMI (HVM), SSD Volume Type` (`ami-02f26adf094f51167`); you can create with other AMI's as well by changing the AMI details in `variables.tf` (Consider adjusting the installation commands if you are changing the AMI or OS)
+- We are using `Ubuntu` (`ami-0750a20e9959e44ff`); you can create with other AMI's as well by changing the AMI details in `variables.tf` (Consider adjusting the installation commands if you are changing the AMI or OS)
 - Default `region = "ap-southeast-1"` (**Singapore**), change this in `main.tf` if needed.
 - A new Security Group will be created as `ansible-lab-security-group` (which will be destroyed when you do `terraform destroy` together with all other resources)
 - All Nodes will be configured with ssh access.
